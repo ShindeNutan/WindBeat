@@ -1,4 +1,4 @@
-package com.windshield.Activity;
+package com.windbeat.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.windshield.R;
+import com.windbeat.R;
 
 public class SplashActivity extends AppCompatActivity {
 

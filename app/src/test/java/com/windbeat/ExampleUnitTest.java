@@ -1,4 +1,4 @@
-package com.windshield;
+package com.windbeat;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.windshield.Activity;
+package com.windbeat.Activity;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.windshield.R;
+import com.windbeat.R;
 
 public class MainActivity extends AppCompatActivity {
 
