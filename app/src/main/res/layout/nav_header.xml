@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/lnr_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginLeft="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:src="@drawable/_home"
+                android:tint="#000" />
+
+            <TextView
+                android:id="@+id/txtHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="15dp"
+                android:textColor="#000"
+                android:text="Home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnr_whatsapp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginLeft="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:src="@drawable/whatsapp"
+                android:tint="#000" />
+
+            <TextView
+                android:id="@+id/txtWhatsapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="15dp"
+                android:textColor="#000"
+                android:text="WhatsApp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnr_whatsappnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorBlack"
+                android:layout_marginHorizontal="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginLeft="70dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="15dp"
+                    android:textColor="#000"
+                    android:text="@string/number" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorBlack"
+                android:layout_marginHorizontal="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnr_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginLeft="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_call_black_24dp"
+                android:tint="#000" />
+
+            <TextView
+                android:id="@+id/txtCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="15dp"
+                android:textColor="#000"
+                android:text="Contact us" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnr_callnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorBlack"
+                android:layout_marginHorizontal="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginLeft="70dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="15dp"
+                    android:textColor="#000"
+                    android:text="@string/number" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorBlack"
+                android:layout_marginHorizontal="5dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:layout_gravity="bottom">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_gravity="center"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:text="@string/app_deve"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/colorAccent"
+                android:text="@string/app_deve_name"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
