@@ -3,4 +3,11 @@
     <string name="number">9867386385</string>
     <string name="app_deve">App Development By: </string>
     <string name="app_deve_name"> Apeksha Web Development and IT Services</string>
+    <string name="message">Message</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="whatsApp">WhatsApp</string>
+    <string name="phone_call">Phone Call</string>
+
+    <string name="enter_message">Enter Message here</string>
+    <string name="send_message">Send Message</string>
 </resources>

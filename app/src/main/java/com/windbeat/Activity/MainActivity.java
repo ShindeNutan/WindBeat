@@ -1,9 +1,5 @@
 package com.windbeat.Activity;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -16,14 +12,23 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.windbeat.R;
+import com.windbeat.Utility.SendSMSWhatsApp;
 
 public class MainActivity extends AppCompatActivity {
 
+    private BottomSheetBehavior sheetBehaviorr;
     DrawerLayout drawer_layout;
     ImageView img_drawer_icon;
     LinearLayout lnr_nav, lnr_home, lnr_whatsapp, lnr_whatsappnumber, lnr_call, lnr_callnumber;
     boolean doubleBackToExitPressedOnce = false;
+    private LinearLayout layoutBottomSheetContact;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +47,13 @@ public class MainActivity extends AppCompatActivity {
         lnr_whatsappnumber = (LinearLayout) findViewById(R.id.lnr_whatsappnumber);
         lnr_call = (LinearLayout) findViewById(R.id.lnr_call);
         lnr_callnumber = (LinearLayout) findViewById(R.id.lnr_callnumber);
+        layoutBottomSheetContact = findViewById(R.id.bottom_sheet_contact);
+
 
     }
 
     public void onClick() {
+        sheetBehaviorr = BottomSheetBehavior.from(layoutBottomSheetContact);
 
         img_drawer_icon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,28 +65,40 @@ public class MainActivity extends AppCompatActivity {
         lnr_whatsapp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String message = null;
+
                 lnr_whatsappnumber.setVisibility(View.VISIBLE);
+
+                sheetBehaviorr.setState(BottomSheetBehavior.STATE_COLLAPSED);
+
+                SendSMSWhatsApp sendSMSWhatsApp = new SendSMSWhatsApp();
+                sendSMSWhatsApp.sendWhatsApp(view.getContext(), message);
+
             }
+
+
         });
 
         lnr_whatsappnumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:" + R.string.number));
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    if (checkSelfPermission(Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    Activity#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for Activity#requestPermissions for more details.
-                        return;
-                    }
-                }
-                startActivity(callIntent);
+//                Intent callIntent = new Intent(Intent.ACTION_CALL);
+//                callIntent.setData(Uri.parse("tel:" + R.string.number));
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//                    if (checkSelfPermission(Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+//                        // TODO: Consider calling
+//                        //    Activity#requestPermissions
+//                        // here to request the missing permissions, and then overriding
+//                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+//                        //                                          int[] grantResults)
+//                        // to handle the case where the user grants the permission. See the documentation
+//                        // for Activity#requestPermissions for more details.
+//
+//
+//                        return;
+//                    }
+//                }
+//                startActivity(callIntent);
 
             }
         });
